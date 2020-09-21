@@ -128,3 +128,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 #STATICFILES_DIRS = ( os.path.join('static'),)
 #STATICFILES_DIRS = ( "/portfolio/static", )
+
+try:
+    from .local_settings import *
+except ImportError:
+    print("Looks Like no local file. You must be on production")
