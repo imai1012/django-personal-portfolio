@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'zqyr&o!easw83rke=*m_fy+%k#(s*68oam)j+c1oy#q#h40z6r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kumasan3.pythonanywhere.com']
 
 
 # Application definition
@@ -121,8 +121,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
-STATICFILES_DIRS = ( "/portfolio/static", )
+#STATICFILES_DIRS = ( os.path.join('static'),)
+#STATICFILES_DIRS = ( "/portfolio/static", )
